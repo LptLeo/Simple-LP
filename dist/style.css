@@ -1,0 +1,152 @@
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../assets/coffee-9858728.jpg");
+  background-repeat: no-repeat;
+  background-size: 223%;
+  background-position-x: -360px;
+  min-height: 100vh;
+}
+body header div {
+  text-align: center;
+  padding: 0 16px;
+  max-width: 720px;
+}
+body header div .cup-hot {
+  animation: float 6s infinite ease-in-out;
+}
+body header div .header-title {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 32px;
+}
+body header div .header-title span {
+  color: rgb(245, 159, 10);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 36px;
+}
+body header div .header-title h1 {
+  color: #F3ECE2;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 36px;
+}
+body header div p {
+  color: #F3ECE2;
+  margin-bottom: 32px;
+}
+body header div nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+body header div nav button {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  width: 200px;
+  height: 40px;
+  padding: 4px 8px;
+  border-radius: 8px !important;
+}
+body header div nav .explore-collection {
+  background-color: rgb(245, 159, 10);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+body header div nav .explore-collection:hover {
+  background-color: rgb(248, 187.8, 83.5);
+  box-shadow: 0 0 28px rgb(247, 178.2, 59);
+}
+body header div nav .about-origins {
+  color: #F3ECE2;
+  border: 2px solid #F3ECE2;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease;
+}
+body header div nav .about-origins:hover {
+  color: #0C131D;
+  border: 2px solid #F3ECE2;
+  background-color: #F3ECE2;
+}
+
+@media (min-width: 576px) {
+  body header {
+    background-size: 163%;
+  }
+  body header div .cup-hot {
+    width: 56px;
+    height: 56px;
+  }
+  body header div .header-title span,
+  body header div .header-title h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  body header div p {
+    font-size: 20px;
+  }
+  body header div nav button {
+    font-size: 16px !important;
+    width: 260px;
+    height: 44px;
+  }
+}
+@media (min-width: 768px) {
+  body header {
+    background-size: 147%;
+  }
+  body header div .cup-hot {
+    width: 60px;
+    height: 60px;
+  }
+  body header div .header-title span,
+  body header div .header-title h1 {
+    font-size: 52px;
+    line-height: 52px;
+  }
+}
+@media (min-width: 992px) {
+  body header {
+    background-size: 100%;
+    background-position: center;
+  }
+}
+@media (min-width: 1200px) {
+  body header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../assets/bag-coffee-9817672.jpg");
+    background-size: 110%;
+  }
+  body header div nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+  body header div nav button {
+    height: 48px;
+  }
+}
+@media (min-width: 1400px) {
+  body header {
+    background-size: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

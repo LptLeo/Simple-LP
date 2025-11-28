@@ -1,0 +1,201 @@
+$main-text-color: #F3ECE2;
+$gold-color: rgb(245, 159, 10);
+
+$animation-duration: 6s;
+$move-distance: -16px;
+$timing-function: ease-in-out;
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY($move-distance);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 35%), rgba(0, 0, 0, 35%)), url('../assets/coffee-9858728.jpg');
+        background-repeat: no-repeat;
+        background-size: 223%;
+        background-position-x: -360px;
+        min-height: 100vh;
+
+        div {
+            text-align: center;
+            padding: 0 16px;
+            max-width: 720px;
+
+            .cup-hot {
+                animation: float $animation-duration infinite $timing-function;
+            }
+
+            .header-title {
+                font-family: "Playfair Display", serif;
+                margin-bottom: 32px;
+
+                span {
+                    color: $gold-color;
+                    font-size: 36px;
+                    font-weight: 900;
+                    line-height: 36px;
+                }
+
+                h1 {
+                    color: $main-text-color;
+                    font-size: 36px;
+                    font-weight: 900;
+                    line-height: 36px;
+                }
+            }
+
+            p {
+                color: $main-text-color;
+                margin-bottom: 32px;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+
+                button {
+                    font-size: 14px !important;
+                    font-weight: 600 !important;
+                    width: 200px;
+                    height: 40px;
+                    padding: 4px 8px;
+                    border-radius: 8px !important;
+                }
+
+                .explore-collection {
+                    background-color: $gold-color;
+                    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease;
+
+                    &:hover {
+                        background-color: lighten($gold-color, 15%);
+                        box-shadow: 0 0 28px lighten($gold-color, 10%);
+                    }
+                }
+
+                .about-origins {
+                    color: $main-text-color;
+                    border: 2px solid $main-text-color;
+                    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+
+                    &:hover {
+                        color: #0C131D;
+                        border: 2px solid $main-text-color;
+                        background-color: $main-text-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 576px) {
+    body header {
+        background-size: 163%;
+
+        div {
+            .cup-hot {
+                width: 56px;
+                height: 56px;
+            }
+
+            .header-title {
+
+                span,
+                h1 {
+                    font-size: 40px;
+                    line-height: 40px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            nav {
+                button {
+                    font-size: 16px !important;
+                    width: 260px;
+                    height: 44px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    body header {
+        background-size: 147%;
+
+        div {
+            .cup-hot {
+                width: 60px;
+                height: 60px;
+            }
+
+            .header-title {
+
+                span,
+                h1 {
+                    font-size: 52px;
+                    line-height: 52px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    body header {
+        background-size: 100%;
+        background-position: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    body header {
+        background-image: linear-gradient(rgba(0, 0, 0, 35%), rgba(0, 0, 0, 35%)), url('../assets/bag-coffee-9817672.jpg');
+        background-size: 110%;
+
+        div {
+            nav {
+                flex-direction: row;
+                justify-content: center;
+                gap: 24px;
+
+                button {
+                    height: 48px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    body header {
+        background-size: 100%;
+    }
+}
